@@ -8,7 +8,7 @@
 #include <assert.h>
 #include <errno.h>
 
-typedef int CMPFUNC (const void *a, const void *b);
+typedef int CMPFUNC(const void *a, const void *b);
 
 //#define cmp(a,b) (*(a) > *(b))
 
