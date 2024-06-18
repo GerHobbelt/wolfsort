@@ -228,7 +228,7 @@ void FUNC(skipsort)(void *array, size_t nmemb, CMPFUNC *cmp)
 
 	if (nmemb <= 96)
 	{
-		VAR swap[nmemb];
+		VAR swap[96];
 
 		FUNC(tail_swap)(pta, swap, nmemb, cmp);
 	}
