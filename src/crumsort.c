@@ -483,7 +483,7 @@ void FUNC(crumsort)(void *array, size_t nmemb, CMPFUNC *cmp)
 {
 	if (nmemb <= 256)
 	{
-		VAR swap[nmemb];
+		VAR swap[256];
 
 		FUNC(quadsort_swap)(array, swap, nmemb, nmemb, cmp);
 
