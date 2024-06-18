@@ -95,7 +95,8 @@ void FUNC(wolf_partition)(VAR *array, VAR *aux, size_t aux_size, size_t nmemb, V
 
 	if (nmemb < 32)
 	{
-		return FUNC(quadsort)(array, nmemb, cmp);
+		FUNC(quadsort)(array, nmemb, cmp);
+		return;
 	}
 
 	range = max - min;
