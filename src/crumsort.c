@@ -117,9 +117,11 @@ void FUNC(crum_analyze)(VAR *array, VAR *swap, size_t swap_size, size_t nmemb, C
 #ifndef cmp
 	if (quad1 > QUAD_CACHE)
 	{
-		asum = bsum = csum = dsum = 1;
+//		asum = bsum = csum = dsum = 1;
+		goto quad_cache;
 	}
 #endif
+
 	switch (asum + bsum * 2 + csum * 4 + dsum * 8)
 	{
 		case 0:
@@ -166,6 +168,9 @@ void FUNC(crum_analyze)(VAR *array, VAR *swap, size_t swap_size, size_t nmemb, C
 		case 13:
 		case 14:
 		case 15:
+#ifndef cmp
+		quad_cache:
+#endif
 			if (asum)
 			{
 				if (abalance) FUNC(quadsort_swap)(array, swap, swap_size, quad1, cmp);
