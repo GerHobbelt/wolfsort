@@ -1068,7 +1068,7 @@ void FUNC(quadsort)(void *array, size_t nmemb, CMPFUNC *cmp)
 
 	if (nmemb < 32)
 	{
-		VAR swap[nmemb];
+		VAR swap[32];
 
 		FUNC(tail_swap)(pta, swap, nmemb, cmp);
 	}

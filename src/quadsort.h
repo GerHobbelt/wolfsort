@@ -28,7 +28,7 @@ typedef int CMPFUNC(const void *a, const void *b);
   #define QUAD_CACHE 4294967295
 #else
 //#define QUAD_CACHE 131072
-  #define QUAD_CACHE 262144
+#define QUAD_CACHE 262144
 //#define QUAD_CACHE 524288
 //#define QUAD_CACHE 4294967295
 #endif
